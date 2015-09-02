@@ -1,0 +1,101 @@
+.html5 {background-color: #e34f26;}
+.css {background-color: #002561;}
+.sass {background-color: #c6538c;}
+.jquery {background-color: #7acef4;}
+.bootstrap {background-color: #6f5499;}
+.angular {background-color: #b94a48;}
+.php {background-color: #8892bf;}
+.mysql {background-color: #015a84;}
+.photoshop {background-color: #131631;}
+
+body {
+    font: 18px/30px Sans-serif; color: #fff;
+}
+
+section {
+    overflow: hidden; height: 993px;
+}
+ul {
+    padding-left: 0;
+}
+
+h2 {
+    font-size: 90px;
+    font-family: helvetica, sans-serif;
+    letter-spacing: -7px;
+    position: relative;
+    text-shadow: 2px 2px 8px #666666;
+}
+
+h2 .first {
+    color:#9fc9f0;
+}
+
+h2 .second {
+    color: #ffa200;
+}
+
+/* intro */
+#intro {
+    background: #dce3ee url(../images/iamcenz-logo-panel-1.png) left no-repeat;
+}
+
+#intro h1 {
+    width: 995px; height: 221px;
+    background: url(../images/iamcenz-panel-1-home.png);
+    text-indent: -9999px;
+    position: relative;
+    top: 105px;
+    left: 350px;
+}
+
+#intro h2 {
+    left: 350px;
+    top: 110px;
+}
+
+#intro p {
+    position: relative;
+    top: 150px;
+    left: 350px;
+    width: 975px;
+    margin: 0 0 30px 0;
+    color: #454545;
+}
+#intro p:nth-child(5) {
+    text-align: center;
+    font-size: 100px;
+    color: lightgrey;
+    margin-top: 70px;
+}
+
+/* skills */
+#skills {
+    background: #ffffff;
+}
+
+#skills h2 {
+    top: 0px;
+    left: 60px;
+}
+
+.skill-label {
+    position: relative;
+    top: 27px;
+    font-size: 40px;
+    left: 20px;
+    color:#ffffff;
+}
+
+.progress {
+    height: 50px;
+    margin-top: -20px;
+}
+
+.six-sec-ease-in-out {
+    -webkit-transition: width 6s ease-in-out;
+    -moz-transition: width 6s ease-in-out;
+    -ms-transition: width 6s ease-in-out;
+    -o-transition: width 6s ease-in-out;
+    transition: width 6s ease-in-out;
+}

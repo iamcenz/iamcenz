@@ -80,6 +80,7 @@
     </li>
     <li>
         <section id="portfolio">
+            <h2><span class="first">what has</span> <span class="second">he done?</span></h2>
             <p>Ut efficitur scelerisque purus vel vestibulum. Integer quis tortor ac odio ultricies ullamcorper accumsan vitae metus.
                 Vivamus nisi diam, iaculis vitae tellus et, interdum congue ex. Sed rhoncus, ex fringilla convallis hendrerit, mi lorem pharetra diam, in sodales tellus lacus at ipsum.
                 Vestibulum quis feugiat ligula, quis vehicula lectus. Integer ac dolor dui. Pellentesque est felis, cursus at nibh at, blandit tincidunt risus.</p>
@@ -115,6 +116,41 @@
 
         scrollorama.animate('#intro h1',{
             duration:750, property:'left', end:-950
+        });
+
+        //Skills Section
+        // Returns true if the specified element has been scrolled into the viewport.
+        function isElementInViewport(elem) {
+            var $elem = $(elem);
+
+            // Get the scroll position of the page.
+            var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+            var viewportTop = $(scrollElem).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
+
+            // Get the position of the element on the page.
+            var elemTop = Math.round( $elem.offset().top );
+            var elemBottom = elemTop + $elem.height();
+
+            return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
+        }
+
+        // Check if it's time to start the animation.
+        function checkAnimation() {
+            var $elem = $('#skills');
+
+            // If the animation has already been started
+            if ($elem.hasClass('start')) return;
+
+            if (isElementInViewport($elem)) {
+                // Start the animation
+                $elem.addClass('start');
+            }
+        }
+
+        // Capture scroll events
+        $(window).scroll(function(){
+            checkAnimation();
         });
 
 
